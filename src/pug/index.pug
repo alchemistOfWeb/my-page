@@ -1,0 +1,18 @@
+extends layout/app 
+
+block page
+    include chunk/header
+    div.container
+        include chunk/aboutme
+        
+        include chunk/education
+        include chunk/careers
+        include chunk/skills
+        include chunk/portfolio
+
+
+    include chunk/footer
+
+block modal
+    div.modal
+        h2 Some modl header
