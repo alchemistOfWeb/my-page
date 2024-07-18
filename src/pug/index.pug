@@ -14,5 +14,22 @@ block page
     include chunk/footer
 
 block modal
-    div.modal
-        h2 Some modl header
+    div.modal.fade(id="exampleModal1",data-bs-backdrop="static",data-bs-keyboard="false",aria-hidden="true")
+        div.modal-dialog.modal-dialog-centered
+            div.modal-content
+                div.modal-header
+                    div
+                        img(class="img-fluid", src="/img/fog.jpg", alt="...", srcset="")
+                        h2 exampleModal 1
+                div.modal-body
+                    p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde voluptas, dignissimos autem nemo tempore illo non eum dolore esse nihil suscipit accusantium! Doloribus praesentium ex eius nisi quos numquam obcaecati?
+    div.modal.fade(id="exampleModal2",data-bs-backdrop="static",data-bs-keyboard="false")
+        div.modal-dialog.modal-dialog-centered
+            div.modal-content.overflow-hidden
+                img(class="img-fluid", src="/img/fog.jpg", alt="...", srcset="")
+                button(type="button" class="btn-close position-absolute btn-close-white" data-bs-dismiss="modal" aria-label="Close")
+                div.modal-header
+                    h2 exampleModal 2
+                div.modal-body
+                    p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde voluptas, dignissimos autem nemo tempore illo non eum dolore esse nihil suscipit accusantium! Doloribus praesentium ex eius nisi quos numquam obcaecati?
+

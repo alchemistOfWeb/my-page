@@ -190,6 +190,11 @@ body {
 //     width: 12px; 
 //     background-color: #000066; 
 // }
+.clickable-list {
+    & li {
+        cursor: pointer;
+    }
+}
 .timeline {
     color:#fff;
     padding:30px 20px;
@@ -201,7 +206,7 @@ body {
     & ul li{
         padding: 20px 20px;
         position: relative;
-        cursor: pointer;
+        // cursor: pointer;
         transition: .5s;
     }
     & ul li:before{
@@ -265,10 +270,21 @@ body {
 }
 
 .modal-wrapper {
-    position: absolute;
+    position: fixed;
+    background: linear-gradient(#e6646465, #9198e569);
     top: 0;
     left: 0;
     right: 0;
     width: 100vw;
     height: 100vh;
+}
+
+.modal {
+    & .btn-close {
+        top: 0;
+        right: 0;
+        &:focus {
+            box-shadow: none;
+        }
+    }
 }
