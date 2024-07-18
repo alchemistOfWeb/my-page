@@ -23,10 +23,37 @@ block modal
                         h2 exampleModal 1
                 div.modal-body
                     p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde voluptas, dignissimos autem nemo tempore illo non eum dolore esse nihil suscipit accusantium! Doloribus praesentium ex eius nisi quos numquam obcaecati?
-    div.modal.fade(id="exampleModal2",data-bs-backdrop="static",data-bs-keyboard="false")
-        div.modal-dialog.modal-dialog-centered
+    
+    
+    div.modal.fade(id="exampleModal2", aria-hidden="true", data-bs-keyboard="false")
+        div.modal-dialog.modal-lg.modal-dialog-centered
             div.modal-content.overflow-hidden
-                img(class="img-fluid", src="/img/fog.jpg", alt="...", srcset="")
+
+                div(id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel")
+                    div.carousel-indicators
+                        button.active(type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1")
+                        button(type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2")
+                        button(type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3")
+                    div.carousel-inner
+                        div.carousel-item.active
+                            img.d-block.w-100(src="/img/fog.jpg", alt="...", srcset="")
+                        div.carousel-item
+                            img.d-block.w-100(src="/img/fog.jpg", alt="...", srcset="")
+                        div.carousel-item
+                            img.d-block.w-100(src="/img/fog.jpg", alt="...", srcset="")
+
+                    div.modal-image-shadow
+                    
+                    button.carousel-control-prev(type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev")
+                        span.carousel-control-prev-icon(aria-hidden="true")
+                        span.visually-hidden Previous
+                    
+                    button.carousel-control-next(type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next")
+                        span.carousel-control-next-icon(aria-hidden="true")
+                        span.visually-hidden Next
+                    
+                
+
                 button(type="button" class="btn-close position-absolute btn-close-white" data-bs-dismiss="modal" aria-label="Close")
                 div.modal-header
                     h2 exampleModal 2

@@ -283,8 +283,27 @@ body {
     & .btn-close {
         top: 0;
         right: 0;
+        z-index: 10;
         &:focus {
             box-shadow: none;
         }
     }
+}
+.modal-image-shadow {
+    box-shadow: inset 0px 0px 40px 25px black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.carousel-indicators {
+    & button[data-bs-target] {
+        background-clip: padding-box;
+    }
+}
+
+.carousel-inner {
+    max-height: 400px;
 }
