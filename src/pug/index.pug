@@ -14,49 +14,79 @@ block page
     include chunk/footer
 
 block modal
-    div.modal.fade(id="exampleModal1",data-bs-backdrop="static",data-bs-keyboard="false",aria-hidden="true")
-        div.modal-dialog.modal-dialog-centered
-            div.modal-content
-                div.modal-header
-                    div
-                        img(class="img-fluid", src="/img/fog.jpg", alt="...", srcset="")
-                        h2 exampleModal 1
-                div.modal-body
-                    p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde voluptas, dignissimos autem nemo tempore illo non eum dolore esse nihil suscipit accusantium! Doloribus praesentium ex eius nisi quos numquam obcaecati?
-    
-    
-    div.modal.fade(id="exampleModal2", aria-hidden="true", data-bs-keyboard="false")
-        div.modal-dialog.modal-lg.modal-dialog-centered
-            div.modal-content.overflow-hidden
+    - var modal_data = {id: "marketingBotModal", title: "Marketing Tg Bot", text: "Телеграм бот с административной частью в самом боте. Пользователь может подписаться, выбрав уровень подписки. Затем он может просмотреть материалы, установленные для каждого уровня подписки. Админ может через бота или через Django-admin настроить рассылку сообщений по времени и загрузить материалы для разных уровней подписки. Для получения обновлений от телеграмма использовался polling."}
+    include ./utils/modal
+    - var modal_data = {id: "doskiModal", title: "Catering network", text: "Разработка нового функционала, устранение багов, подключение к стороннему API, верстка по макетам из Figma. В проекте реализованы функции заказа доставки продуктов и бронирования столиков в ресторане с интерактивной схемой расположения столиков для каждого города. Менеджерская часть сайта позволяет обрабатывать и подтверждать бронирования. Пользователь может зарегистрироваться с использованием телефона в качестве имени пользователя и просматривать историю заказов в личном кабинете."}
+    include ./utils/modal
+    - var modal_data = {id: "alphardModal", title: "Huge Audio Distributor", text: "Реализация нового функционала как на фронтенде, так и на бекенде, устранение багов, подключение к стороннему API. В проекте реализованы функции просмотра и заказа аудио оборудования с детальными страницами продуктов, фотографиями, описанием, стоимостью доставки и комментариями пользователей. Включена быстрая регистрация по номеру телефона и подписка на рассылку по почте. В личном кабинете доступна история и статус заказов с возможностью отмены и изменения заказов. На сайте реализована система скидок и волн скидок, активируемых во время крупных акций, таких как Черная пятница. Celery используется для рассылки информации о статусе заказов, интеграции с 1C для отправки и получения статусов заказов, актуализации адресов пунктов выдачи и отправки заказов в транспортные компании. CI-CD автоматизировал тестирование и развертывание сайта при загрузке новых коммитов на продакшн и тестовые серверы. Docker использовался для контейнеризации и запуска Celery, базы данных и проекта на Django."}
+    include ./utils/modal
+    - var modal_data = {id: "exampleModal2", title: "Marketing Tg Bot", text: "Some text<br>Another paragraph"}
+    include ./utils/modal
 
-                div(id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel")
-                    div.carousel-indicators
-                        button.active(type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1")
-                        button(type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2")
-                        button(type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3")
-                    div.carousel-inner
-                        div.carousel-item.active
-                            img.d-block.w-100(src="/img/fog.jpg", alt="...", srcset="")
-                        div.carousel-item
-                            img.d-block.w-100(src="/img/fog.jpg", alt="...", srcset="")
-                        div.carousel-item
-                            img.d-block.w-100(src="/img/fog.jpg", alt="...", srcset="")
+    //- div.modal.fade(id="exampleModal2", aria-hidden="true", data-bs-keyboard="false")
+    //-     div.modal-dialog.modal-lg.modal-dialog-centered
+    //-         div.modal-content.overflow-hidden
+    //-             div(id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel")
+    //-                 div.carousel-indicators
+    //-                     button.active(type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1")
+    //-                     button(type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2")
+    //-                     button(type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3")
+    //-                 div.carousel-inner
+    //-                     div.carousel-item.active
+    //-                         img.d-block.w-100(src="/img/fog.jpg", alt="...", srcset="")
+    //-                     div.carousel-item
+    //-                         img.d-block.w-100(src="/img/fog.jpg", alt="...", srcset="")
+    //-                     div.carousel-item
+    //-                         img.d-block.w-100(src="/img/fog.jpg", alt="...", srcset="")
 
-                    div.modal-image-shadow
+    //-                 div.modal-image-shadow
+
+    //-                 button.carousel-control-prev(type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev")
+    //-                     span.carousel-control-prev-icon(aria-hidden="true")
+    //-                     span.visually-hidden Previous
                     
-                    button.carousel-control-prev(type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev")
-                        span.carousel-control-prev-icon(aria-hidden="true")
-                        span.visually-hidden Previous
+    //-                 button.carousel-control-next(type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next")
+    //-                     span.carousel-control-next-icon(aria-hidden="true")
+    //-                     span.visually-hidden Next
+
+    //-             button(type="button" class="btn-close position-absolute btn-close-white" data-bs-dismiss="modal" aria-label="Close")
+    //-             div.modal-header
+    //-                 h2 exampleModal 2
+    //-             div.modal-body
+    //-                 p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde voluptas, dignissimos autem nemo tempore illo non eum dolore esse nihil suscipit accusantium! Doloribus praesentium ex eius nisi quos numquam obcaecati?
+
+    //- div.modal.fade(id="marketingTgBotModal", aria-hidden="true", data-bs-keyboard="false")
+    //-     div.modal-dialog.modal-lg.modal-dialog-centered
+    //-         div.modal-content.overflow-hidden
+
+    //-             div(id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel")
+    //-                 div.carousel-indicators
+    //-                     button.active(type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1")
+    //-                     button(type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2")
+    //-                     button(type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3")
+    //-                 div.carousel-inner
+    //-                     div.carousel-item.active
+    //-                         img.d-block.w-100(src="/img/fog.jpg", alt="...", srcset="")
+    //-                     div.carousel-item
+    //-                         img.d-block.w-100(src="/img/fog.jpg", alt="...", srcset="")
+    //-                     div.carousel-item
+    //-                         img.d-block.w-100(src="/img/fog.jpg", alt="...", srcset="")
+
+    //-                 div.modal-image-shadow
+
+    //-                 button.carousel-control-prev(type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev")
+    //-                     span.carousel-control-prev-icon(aria-hidden="true")
+    //-                     span.visually-hidden Previous
                     
-                    button.carousel-control-next(type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next")
-                        span.carousel-control-next-icon(aria-hidden="true")
-                        span.visually-hidden Next
+    //-                 button.carousel-control-next(type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next")
+    //-                     span.carousel-control-next-icon(aria-hidden="true")
+    //-                     span.visually-hidden Next
                     
                 
 
-                button(type="button" class="btn-close position-absolute btn-close-white" data-bs-dismiss="modal" aria-label="Close")
-                div.modal-header
-                    h2 exampleModal 2
-                div.modal-body
-                    p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde voluptas, dignissimos autem nemo tempore illo non eum dolore esse nihil suscipit accusantium! Doloribus praesentium ex eius nisi quos numquam obcaecati?
+    //-             button(type="button" class="btn-close position-absolute btn-close-white" data-bs-dismiss="modal" aria-label="Close")
+    //-             div.modal-header
+    //-                 h2 Marketing Tg Bot
+    //-             div.modal-body
+    //-                 p Телеграм бот с административной частью в самом боте. Пользователь может подписаться, выбрав уровень подписки. Затем он может просмотреть материалы, установленные для каждого уровня подписки. Админ может через бота или через Django-admin настроить рассылку сообщений по времени и загрузить материалы для разных уровней подписки. Для получения обновлений от телеграмма использовался polling.
 
