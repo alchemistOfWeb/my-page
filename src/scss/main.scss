@@ -16,15 +16,15 @@ body {
 }
 
 
-// @import "../../node_modules/node_modules/wowjs/css/libs/animate";
 @import "../../node_modules/aos/dist/aos";
 @import "../../node_modules/bootstrap/scss/bootstrap";
-@import "../../node_modules/bootstrap-icons/font/bootstrap-icons.scss";
+
 @font-face {
     font-display: block;
     font-family: "bootstrap-icons";
-    src: url(/fonts/bootstrap-icons.woff2) format("woff2"),url(/fonts/bootstrap-icons.woff) format("woff")
+    src: url('../fonts/bootstrap-icons.woff2') format("woff2"), url('../fonts/bootstrap-icons.woff') format("woff");
 }
+@import "../../node_modules/bootstrap-icons/font/bootstrap-icons.scss";
 
 @import "chunk/title.scss";
 
@@ -290,7 +290,8 @@ body {
     }
 }
 .modal-image-shadow {
-    box-shadow: inset 0px 0px 40px 25px black;
+    // box-shadow: inset 0px 0px 40px 25px black;
+    box-shadow: inset 0 0 20rem rgba(0, 0, 0, 1);
     position: absolute;
     top: 0;
     left: 0;
