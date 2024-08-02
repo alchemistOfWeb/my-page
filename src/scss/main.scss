@@ -2,7 +2,7 @@ $base-font-size: 22px;
 
 @font-face {
     font-family: "bangers";
-    src: url(/fonts/bangers.regular.woff2) format("woff2"), url(/fonts/bangers.regular.woff) format("woff");
+    src: url("../fonts/bangers.regular.woff2") format("woff2"), url("../fonts/bangers.regular.woff") format("woff");
 }
 * {
     box-sizing: border-box;
@@ -31,7 +31,7 @@ body {
 .section-header {
     overflow: overlay;
     height: 100vh;
-    background-image: url("/img/fog.jpg");
+    background-image: url("../img/fog.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
