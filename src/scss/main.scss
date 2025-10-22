@@ -219,6 +219,14 @@ body {
         // cursor: pointer;
         transition: .5s;
     }
+    
+    &.hover-effect ul li{
+        cursor: pointer;
+        border:#fff 1px solid;
+        border-radius:10px;
+        margin-bottom: 5px;
+    }
+
     & ul li:before{
         position:absolute;
         content:'';
@@ -230,10 +238,10 @@ body {
         top: 25px;
         transition:.5s;
     }
-    & ul li:hover{
+    &.hover-effect ul li:hover{
         background-color:#071f2a;
     }
-    & ul li:hover:before{
+    &.hover-effect ul li:hover:before{
         background-color:#0F0;
         box-shadow:0px 0px 10px 2px #0F0;
     }
