@@ -4,6 +4,10 @@ $base-font-size: 22px;
     font-family: "bangers";
     src: url("../fonts/bangers.regular.woff2") format("woff2"), url("../fonts/bangers.regular.woff") format("woff");
 }
+// @font-face {
+//     font-family: "Capitel";
+//     src: url("../fonts/bangers.regular.woff2") format("woff2"), url("../fonts/bangers.regular.woff") format("woff");
+// }
 * {
     box-sizing: border-box;
 }
@@ -31,7 +35,7 @@ body {
 .section-header {
     overflow: overlay;
     height: 100vh;
-    background-image: url("../img/fog.jpg");
+    background-image: url("../img/pattern1.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -55,15 +59,17 @@ body {
         font-size: 43px;
     }
     & h1, & h2 {
-        font-family: 'bangers', cursive, sans-serif;
+        // font-family: 'bangers', cursive, sans-serif;
+        font-family: auto;
         margin: 0;
         padding: 0;
         text-align: center;
         font-weight: 700;
         // color: #10e3ba;
-        color: transparent;
-        -webkit-text-stroke: .1px yellow;
-        text-shadow: #af3903 1px 0 10px;;
+        // color: transparent;
+        filter: drop-shadow(2px 2px 2px black);
+        -webkit-text-stroke: .1px gray;
+        // text-shadow: #af3903 1px 0 10px;;
         // text-shadow: rgb(0, 0, 0) 1px 0 10px;
     }
     &__inner-layout {
@@ -78,7 +84,8 @@ body {
         animation-name: rise;
         animation-duration: 2s;
         height: 3px;
-        background-color: yellow;
+        // background-color: yellow;
+        background-color: rgb(168, 252, 227);
         width: 0%;
         box-shadow: 0 0 7px 1px white;
     }
