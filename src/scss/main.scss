@@ -250,7 +250,7 @@ body {
         height: 100%;
     }
     &:hover > img {
-        filter: blur(4px);
+        filter:drop-shadow(0 0 10px cyan);
     }
     &__title {
         font-size: 23px;
