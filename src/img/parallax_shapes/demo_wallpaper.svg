@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="800" viewBox="0 0 1400 800">
+  <defs>
+    <style>
+      .g1 {opacity: .75; stroke: #c8cfd6;}
+      .g2 {opacity: .5; stroke: #aab3bd;}
+      .g3 {opacity: .35; stroke: #8f99a5;}
+    </style>
+    <symbol id="x" viewBox="0 0 128 128"><path d="M24 24 L104 104 M104 24 L24 104" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="plus" viewBox="0 0 128 128"><path d="M64 20 L64 108 M20 64 L108 64" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="ring" viewBox="0 0 128 128"><circle cx="64" cy="64" r="36" fill="none" stroke="currentColor" stroke-width="8"/></symbol>
+    <symbol id="chevl" viewBox="0 0 128 128"><path d="M78 24 L42 64 L78 104" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="chevr" viewBox="0 0 128 128"><path d="M50 24 L86 64 L50 104" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="arcq" viewBox="0 0 128 128"><path d="M96 32 A64 64 0 0 1 32 96" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="corner" viewBox="0 0 128 128"><path d="M28 100 L28 28 L100 28" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </defs>
+  <rect width="100%" height="100%" fill="#11161b"/>
+  <g class="g1" fill="none">
+    <use href="#x" x="100" y="120"/>
+    <use href="#plus" x="320" y="80"/>
+    <use href="#ring" x="560" y="40"/>
+    <use href="#chevl" x="840" y="60"/>
+    <use href="#chevr" x="1080" y="100"/>
+  </g>
+  <g class="g2" fill="none">
+    <use href="#arcq" x="180" y="360"/>
+    <use href="#corner" x="420" y="320"/>
+    <use href="#ring" x="700" y="320"/>
+    <use href="#x" x="980" y="300"/>
+  </g>
+  <g class="g3" fill="none">
+    <use href="#plus" x="220" y="560"/>
+    <use href="#chevr" x="460" y="560"/>
+    <use href="#chevl" x="740" y="580"/>
+    <use href="#ring" x="1040" y="540"/>
+  </g>
+</svg>

@@ -35,11 +35,11 @@ body {
 .section-header {
     overflow: overlay;
     height: 100vh;
-    background-image: url("../img/pattern1.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
+    // background-image: url("../img/pattern1.jpg");
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // background-size: cover;
+    // background-attachment: fixed;
     &__name {
         animation-name: riseup;
         animation-duration: 1s;
@@ -91,6 +91,113 @@ body {
     }
 
 }
+
+
+
+.section-header {
+  position: relative;
+  z-index: 2;
+
+  &.mb-5 {
+    padding-top: clamp(80px, 12vh, 180px);
+    padding-bottom: clamp(80px, 12vh, 180px);
+  }
+}
+
+.section-header-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+
+    .section-bg__shape {
+        position: absolute;
+        width: clamp(36px, 6vw, 96px);
+        height: auto;
+        opacity: 0.75;
+        transform: translate3d(0, 0, 0);
+        will-change: transform;
+        filter: invert(85%) sepia(3%) saturate(200%) hue-rotate(180deg)
+        brightness(90%) contrast(85%);
+
+        &.tone-1 {
+            opacity: 0.75;
+        }
+        &.tone-2 {
+            opacity: 0.45;
+        }
+        &.tone-3 {
+            opacity: 0.3;
+        }
+    }
+
+  // Позиции фигур
+    @for $i from 1 through 18 {
+        .section-bg__shape:nth-child(#{$i}) {
+            @if $i == 1 {
+                top: 12%;
+                left: 6%;
+            } @else if $i == 2 {
+                top: 8%;
+                left: 28%;
+            } @else if $i == 3 {
+                top: 5%;
+                left: 52%;
+            } @else if $i == 4 {
+                top: 11%;
+                left: 74%;
+            } @else if $i == 5 {
+                top: 18%;
+                left: 90%;
+            } @else if $i == 6 {
+                top: 36%;
+                left: 10%;
+            } @else if $i == 7 {
+                top: 38%;
+                left: 28%;
+            } @else if $i == 8 {
+                top: 32%;
+                left: 50%;
+            } @else if $i == 9 {
+                top: 34%;
+                left: 70%;
+            } @else if $i == 10 {
+                top: 40%;
+                left: 88%;
+            } @else if $i == 11 {
+                top: 58%;
+                left: 6%;
+            } @else if $i == 12 {
+                top: 56%;
+                left: 26%;
+            } @else if $i == 13 {
+                top: 74%;
+                left: 48%;
+            } @else if $i == 14 {
+                top: 69%;
+                left: 68%;
+            } @else if $i == 15 {
+                top: 86%;
+                left: 86%;
+            } @else if $i == 16 {
+                top: 78%;
+                left: 14%;
+            } @else if $i == 17 {
+                top: 76%;
+                left: 36%;
+            } @else if $i == 18 {
+                top: 89%;
+                left: 58%;
+            }
+        }
+    }
+}
+
+
+
+
+
 @keyframes riseup {
     from {
         transform: translateY(75px);
